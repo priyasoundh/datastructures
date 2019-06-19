@@ -38,7 +38,7 @@ def display(l):
 
 def menu():
   l=[]
-  print("welcome")
+  print("Linked list")
   while(1):
     print("1-->insert")
     print("2-->delete")
