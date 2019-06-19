@@ -30,8 +30,9 @@ def search(l,a):
   
 def display(l):
   if(len(l)>0):
-    for x in l:
-      print(x)
+    for x in range(0,len(l)-1):
+      print(l[x],end='->')
+    print(l[-1])
   else:
     print("no elements found")
 
