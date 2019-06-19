@@ -71,16 +71,25 @@ def menu():
       val=input("data to insert:")
       s.insert_end(val)
     elif(x==2):
-      s.delete_end()
-    elif(x==3):
-      a=input("data:")
-      b=s.search(a)
-      if(b):
-        print("yes")
+      if(s.le()>0):
+        s.delete_end()
       else:
-        print("No")
+        print("no elements found")
+    elif(x==3):
+      if(s.le()>0):
+        a=input("data:")
+        b=s.search(a)
+        if(b):
+          print("yes")
+        else:
+          print("No")
+      else:
+        print("no elements found")
     elif(x==4):
-      s.display()
+      if(s.le()>0):
+        s.display()
+      else:
+        print("no elements found")
     elif(x==5):
       print("count:",s.le())
     elif(x==6):
