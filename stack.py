@@ -28,10 +28,10 @@ def peak(l):
 
 def menu():
   l=[]
-  print("welcome")
+  print("Stack")
   while(1):
-    print("1-->insert")
-    print("2-->delete")
+    print("1-->push")
+    print("2-->pop")
     print("3-->search")
     print("4-->display")
     print("5-->count number of elements")
