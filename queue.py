@@ -50,7 +50,7 @@ class Singly_linked:
     print(temp.data)
 
 def menu():
-  print("Linkedlist")
+  print("Queue")
   s=Singly_linked()
   while(1):
     print("1-->insert")
