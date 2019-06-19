@@ -71,6 +71,8 @@ class Singly_linked:
     return False
    
   def le(self):
+    if(self.head==None):
+      return 0
     temp=self.head
     count=0
     while(temp!=None):
@@ -110,28 +112,37 @@ def menu():
         b=int(input("position:"))
         s.insert_pos(val,b)
     elif(x==2):
-      print("1--> delete at beginning")
-      print("2--> delete at end")
-      print("3--> delete in between beginning and end")
-      y=int(input())
-      if(y==1):
-        s.delete_beg()
-      if(y==2):
-        s.delete_end()
-      if(y==3):
-        b=int(input("position:"))
-        s.delete_pos(b)
-    elif(x==3):
-      a=input("data:")
-      b=s.search(a)
-      if(b):
-        print("yes")
+      if(s.le()>0):
+        print("1--> delete at beginning")
+        print("2--> delete at end")
+        print("3--> delete in between beginning and end")
+        y=int(input())
+        if(y==1):
+          s.delete_beg()
+        if(y==2):
+          s.delete_end()
+        if(y==3):
+          b=int(input("position:"))
+          s.delete_pos(b)
       else:
-        print("No")
+        print("no elements found")
+    elif(x==3):
+      if(s.le()>0):
+        a=input("data:")
+        b=s.search(a)
+        if(b):
+          print("yes")
+        else:
+          print("No")
+      else:
+        print("no elements found")
     elif(x==5):
       print("count",s.le())
     elif(x==4):
-      s.display()
+      if(s.le()>0):
+        s.display()
+      else:
+        print("no elemenys found")
     elif(x==6):
       break
 
