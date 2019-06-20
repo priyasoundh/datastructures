@@ -142,7 +142,7 @@ def menu():
       if(s.le()>0):
         s.display()
       else:
-        print("no elemenys found")
+        print("no elements found")
     elif(x==6):
       break
 
